@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!--   start side bar -->
+        <div class=" col-6 col-lg-3 col-xl-2 vh-100 sidebar  p-0 pl-3 "  >
+            <div class="row d-xl-none d-lg-none d-md-block mb-3 sidebar-header  mr-1 mt-2">
+                <div class="col-12 text-dark p-1   rounded" style="background-image: linear-gradient(black,white);">
+                <div class=" d-flex align-items-center justify-content-between">
+                  <span class="m-0">
+                    <i class=" feather-monitor p-2 bg-secondary text-light rounded "></i>
+                    <span class="ml-1 text-uppercase  font-weight-bold mt-1 h4 text-light">Tools</span>
+                </span>
+                     <i class=" feather-x-circle font-weight-bold   hide-sidebar-btn btn  d-block d-lg-none  p-2 text-dark" style="font-size:1em;"></i>
+                 
+                 </div>
+                </div>
+            </div>
+              <div class="text-center m-2 d-xl-block d-lg-block d-none">
+                  <img src="img/user/images.jpg" alt="" class=" rounded-circle" width="99px" height="99px">
+              </div>
+
+            <div class="nav-menu">
+                <ul>
+           
+                    <li class="menu-spacer"></li>
+                    <li class="menu-item mb-4">
+                        <a href="#" class="menu-item-link active" >
+                           <span>
+                                <i class="feather-home text-secondary"></i> Dashbord</span>
+                        </a>
+                    </li> 
+
+                   
+
+                   <li class="menu-item">
+                       <a href="shield.html" class="menu-item-link"><span><i class="fa fa-shield-virus  text-secondary"></i> Shield</span> </a>
+                   </li>
+                    <li class="menu-spacer"></li>
+                   <li class="menu-item">
+                    <a href="#" class="menu-item-link "><span><i class="fa fa-lungs-virus  text-secondary"></i> About It</span> </a>
+                </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- end side bar
+         -->
+        <div class="col-12 col-lg-9 col-xl-10  vh-100  content shadow-sm p-xl-2 p-1 ">
+            <!-- start header -->
+
+            <div class="row header mb-3">
+                <div class="col-12">
+                    <div class="p-1 bg-secondary  rounded d-flex align-items-center justify-content-between">
+                        <div class="show-sidebar-btn btn-link d-block d-lg-none" >
+                        <i class=" feather-menu text-light text-decoration-none" style="font-size: 1.5em;"></i>
+                        </div>
+                       
+                        <div class="">
+                            <div class="h3 m-1 text-light">
+                                <i class=" feather-globe"></i>
+                                <span> Global Covid List</span>
+                                </div>
+                        </div>
+                    <div class="dropdown ">
+                     
+                        <button class="btn btn-secondary dropdown-toggle btn-light" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="img/user/avatar1.jpg"  class="user-img shadow-sm" alt="">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item active" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- end header -->
+
+
+             
+
+            
+            <!-- content --> 
+            <!-- nav tabs -->
+            <div class="d-flex justify-content-between">
+            <ul class="nav nav-tabs mb-3 justify-content-between">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="covidDashboard.html">Chart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="table.html">Table</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+                
+                
+                 <div class=" nav-item">
+                        <div class=" form-inline justify-content-center mt-2 m-lg-0 ">
+                            <input type="text" class=" form-control-sm" id="input-text" 
+                            style="text-transform: capitalize;"
+                             placeholder="Search Counteries" list="country-list">
+
+                            <datalist id="country-list">
+                                <option value="Austria"></option>
+                                <option value="Malaysia"></option>
+                                <option value="Myanmar"></option>
+                                <option value="Japan"></option>
+                                <option value="Belgium"></option>
+                                <option value="Sweden"></option>
+                            </datalist>
+
+                            <button type="button" class="btn btn-sm  btn-outline-secondary ml-1" id="cal" style="background-color:  #6f42c1;">
+                            <i class=" feather-search  text-light  "></i></button>
+                            <i class=" feather-info m-1 h4  text-danger " id="wrong" title="Wrong Text" style="display: none;"></i>
+                        </div>
+                        
+                    </div>
+              </ul>
+              </div>
+
+              <!-- end nav tabs -->
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    
+                    <div class="card status-card" onclick="go('https://google.com')">
+                        <div class="card-bordy p-2">
+                            <div class="row align-items-center justify-content-center">
+                            <div class="col-4   text-center">
+                                <i class="fa fa-users h1" style="color:red;"></i>
+                                
+                            </div>
+                            <div class="col-8 ">
+                                <p class="mb-1 h4 font-weight-bolder counter " id="tdt1">234</p>
+                                <p class="mb-0 text-black-50">New Deaths</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    
+                    <div class="card status-card"  onclick="go('https://google.com')">
+                        <div class="card-bordy p-2">
+                            <div class="row align-items-center justify-content-center">
+                            <div class=" col-4 text-center ">
+                                <i class="fa fa-users-slash  h1" style="color:rgb(23, 23, 133);"></i>
+                            </div>
+                            <div class="col-8 ">
+                                <p class="mb-1 h4 font-weight-bolder counter" id="tdt2">344</p>
+                                <p class="mb-0 text-black-50"> Total Death</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    
+                    <div class="card status-card"  onclick="go('items_list.html')">
+                        <div class="card-bordy p-2">
+                            <div class="row align-items-center justify-content-center">
+                            <div class=" col-4  text-center">
+                                <i class=" feather-aperture  h1" style="color:#ffc107;"></i>
+                            </div>
+                            <div class="col-8 ">
+                                <p class="mb-1 h4 font-weight-bolder counter" id="tdt3">134</p>
+                                <p class="mb-0 text-black-50">New Recovered</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    
+                    <div class="card status-card "  onclick="go('https://google.com')">
+                        <div class="card-bordy p-2">
+                            <div class="row align-items-center justify-content-center">
+                            <div class=" col-4  text-center">
+                                <i class=" feather-package text-success h1"></i>
+                            </div>
+                            <div class="col-8 ">
+                                <p class="mb-1 h4 font-weight-bolder counter" id="tdt4">14</p>
+                                <p class="mb-0 text-black-50">TotalRecovered </p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+
+                 <!-- graph-->
+            <div class="row">
+             <div class=" col-12 col-xl-7">
+              <div class="card mb-4">
+                  <div class=" card-body p-1">
+                    <div class="d-flex justify-content-between align-items-center p-2">
+                        <h4 class="mb-0 countries-name font-weight-bolder   wow animate__zoomInLeft" style="color: #28a745; ">Global</h4>
+                        <div class="">
+                            <i class="feather-bar-chart h4 mb-0 text-danger"></i>
+                        </div>
+                    </div>      
+                    
+                    <canvas id="myChart" ></canvas>
+                  </div>
+              </div>
+                
+             </div>
+
+             <div class="col-12 col-xl-5">
+                 <div class=" card">
+                     <div class="card-body p-1">
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <h4 class="mb-0 countries-name font-weight-bolder wow animate__fadeOutTopLeft  " style="color:rgb(23, 23, 133) ;">Global</h4>
+                            <div class="">
+                                <i class="feather-pie-chart h4 mb-0 " style="color: #6f42c1;"></i>
+                            </div>
+                        </div>
+                        
+                        <canvas id="foryouChart" height="205px" ></canvas>
+                     </div>
+                 </div>
+             </div>
+
+            </div> 
+                <!-- end graph -->
+              
+                    </div>
+                    <!-- end content -->
+                
+                </div>
+               
+            </div>
+        
+  <script src="js/loop.js"></script>
+<script src="vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap/js/popper.min.js"></script>
+<script src="vendor/way_point/jquery.waypoints.min.js"></script>
+<script src="vendor/counter_up/counter_up.js"></script>
+<script src="vendor/wow/wow.min.js"></script>
+<script src="vendor/bootstrap/js/js/bootstrap.bundle.js"></script>
+<script src="vendor/chart_js/Chart.min.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="js/dashboard.js"></script>
+<script>
+     
+     wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animate__animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+                 
+
+</script>
+</body>
+</html>
